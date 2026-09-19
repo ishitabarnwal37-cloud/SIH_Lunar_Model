@@ -1,2 +1,7 @@
 Dataset
 .DS_Store
+.venv/
+data/processed/
+outputs/
+__pycache__/
+*.pyc
