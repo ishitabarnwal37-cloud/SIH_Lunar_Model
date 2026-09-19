@@ -1,0 +1,13 @@
+# Environment for the OHRC + TMC preprocessing pipeline (src/).
+# rasterio's Windows/Linux/macOS wheels bundle GDAL, so no osgeo bindings,
+# no gdal_translate/gdalinfo executables and no compiler are needed.
+#
+#   python -m venv .venv
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+#   .venv\Scripts\python.exe src\26.preprocess_main.py
+#
+# Conda alternative: conda create -n lunar-preprocess -c conda-forge python=3.12 rasterio numpy pillow
+rasterio
+numpy
+pillow
+opencv-python   # only needed by the legacy script 09
