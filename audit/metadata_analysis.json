@@ -1,0 +1,880 @@
+{
+  "method": "Straight lon/lat corner edges clipped with OGR; spherical equal-area integration; not a valid-pixel overlap measurement",
+  "moon_radius_assumed_m": 1737400.0,
+  "products": {
+    "IIRS": {
+      "id": "ch2_iir_nri_20240523T1600301891_d_img_d18",
+      "label": "ch2_iir_nri_20240523T1600301891_d_img_d18/data/raw/20240523/ch2_iir_nri_20240523T1600301891_d_img_d18.xml",
+      "mission": "Chandrayaan-2 Orbiter IIRS Experiment",
+      "start": "2024-05-23T16:00:30.1891Z",
+      "stop": "2024-05-23T16:12:05.2280Z",
+      "level": "Raw",
+      "parameters": {
+        "job_id": {
+          "value": "IIRXXD18CHO2116102NNNN24144172444838_V2_1"
+        },
+        "level0_dir_name": {
+          "value": "IIRXXD18CHO2116102NNNN24144172444838_V2_1"
+        },
+        "imaging_orbit_number": {
+          "value": "21160"
+        },
+        "dumping_orbit_number": {
+          "value": "21161"
+        },
+        "line_exposure_duration": {
+          "value": "53.060",
+          "unit": "ms"
+        },
+        "gain": {
+          "value": "g2"
+        },
+        "exposure": {
+          "value": "e1"
+        },
+        "exposure_duration": {
+          "value": "1",
+          "unit": "ms"
+        },
+        "detector_temperature": {
+          "value": "88.970",
+          "unit": "K"
+        },
+        "tertiary_mirror_temperature": {
+          "value": "-39.677",
+          "unit": "degC"
+        },
+        "spectrometer_casing_temperature": {
+          "value": "-41.218",
+          "unit": "degC"
+        },
+        "dewar_vw_temperature": {
+          "value": "-47.352",
+          "unit": "degC"
+        },
+        "detector_pixel_width": {
+          "value": "30",
+          "unit": "micrometer"
+        },
+        "focal_length": {
+          "value": "74.999",
+          "unit": "mm"
+        },
+        "spacecraft_altitude": {
+          "value": "121.44",
+          "unit": "km"
+        },
+        "pixel_resolution": {
+          "value": "97.15",
+          "unit": "m/pixel"
+        },
+        "roll": {
+          "value": "-0.003682",
+          "unit": "deg"
+        },
+        "pitch": {
+          "value": "-0.097171",
+          "unit": "deg"
+        },
+        "yaw": {
+          "value": "-0.012608",
+          "unit": "deg"
+        },
+        "sun_azimuth": {
+          "value": "285.611693",
+          "unit": "deg"
+        },
+        "sun_elevation": {
+          "value": "57.317024",
+          "unit": "deg"
+        },
+        "solar_incidence": {
+          "value": "32.682976",
+          "unit": "deg"
+        },
+        "projection": {
+          "value": "Selenographic"
+        },
+        "area": {
+          "value": "Equatorial"
+        }
+      },
+      "corners": {
+        "System_Level_Coordinates": {
+          "upper_left_latitude": {
+            "value": "8.195483",
+            "unit": "deg"
+          },
+          "upper_left_longitude": {
+            "value": "23.771330",
+            "unit": "deg"
+          },
+          "upper_right_latitude": {
+            "value": "8.179012",
+            "unit": "deg"
+          },
+          "upper_right_longitude": {
+            "value": "24.604061",
+            "unit": "deg"
+          },
+          "lower_left_latitude": {
+            "value": "-26.147187",
+            "unit": "deg"
+          },
+          "lower_left_longitude": {
+            "value": "22.857987",
+            "unit": "deg"
+          },
+          "lower_right_latitude": {
+            "value": "-26.165032",
+            "unit": "deg"
+          },
+          "lower_right_longitude": {
+            "value": "23.750095",
+            "unit": "deg"
+          }
+        }
+      },
+      "axes": {
+        "band": 256,
+        "line": 13101,
+        "sample": 250
+      },
+      "datatype": "UnsignedLSB2",
+      "label_file_bytes": 1676928000,
+      "md5": "e6cc690de82e26accd24732276344ebd",
+      "lfs_pointer": null,
+      "bands": 256,
+      "footprint_areas_km2": {
+        "System_Level_Coordinates": 26498.288018487485
+      },
+      "selected_wavelengths_nm": {
+        "1": "712.3",
+        "6": "796.6",
+        "15": "948.3",
+        "16": "965.1",
+        "137": "3004.3",
+        "256": "5009.7"
+      },
+      "expected_bytes_from_axes": 1676928000
+    },
+    "OHRC_2021": {
+      "id": "ch2_ohr_ncp_20210402T0546284043_d_img_d18",
+      "label": "ch2_ohr_ncp_20210402T0546284043_d_img_d18/data/calibrated/20210402/ch2_ohr_ncp_20210402T0546284043_d_img_d18.xml",
+      "mission": "Chandrayaan-2 Orbiter OHRC Experiment",
+      "start": "2021-04-02T05:46:28.4043Z",
+      "stop": "2021-04-02T05:46:44.7878Z",
+      "level": "Calibrated",
+      "parameters": {
+        "job_id": {
+          "value": "OHRXXD18CHO0715802NNNN21092205410931_V1_0_02"
+        },
+        "level0_dir_name": {
+          "value": "OHRXXD18CHO0715802NNNN21092205410931_V1_0_02"
+        },
+        "imaging_orbit_number": {
+          "value": "7150"
+        },
+        "dumping_orbit_number": {
+          "value": "7158"
+        },
+        "line_exposure_duration": {
+          "value": "209.580",
+          "unit": "ms"
+        },
+        "bits_selection": {
+          "value": "msb"
+        },
+        "tdi_stages": {
+          "value": "TDI64"
+        },
+        "detector_pixel_width": {
+          "value": "5.2",
+          "unit": "micrometer"
+        },
+        "focal_length": {
+          "value": "2080",
+          "unit": "mm"
+        },
+        "reference_data_used": {
+          "value": "System"
+        },
+        "orbit_limb_direction": {
+          "value": "Descending"
+        },
+        "spacecraft_yaw_direction": {
+          "value": "False"
+        },
+        "spacecraft_altitude": {
+          "value": "102.71",
+          "unit": "km"
+        },
+        "pixel_resolution": {
+          "value": "0.26",
+          "unit": "m/pixel"
+        },
+        "roll": {
+          "value": "13.941601",
+          "unit": "deg"
+        },
+        "pitch": {
+          "value": "-22.703042",
+          "unit": "deg"
+        },
+        "yaw": {
+          "value": "0.023279",
+          "unit": "deg"
+        },
+        "sun_azimuth": {
+          "value": "268.810944",
+          "unit": "deg"
+        },
+        "sun_elevation": {
+          "value": "10.130514",
+          "unit": "deg"
+        },
+        "solar_incidence": {
+          "value": "79.869486",
+          "unit": "deg"
+        },
+        "projection": {
+          "value": "Selenographic"
+        },
+        "area": {
+          "value": "Equatorial"
+        }
+      },
+      "corners": {
+        "System_Level_Coordinates": {
+          "upper_left_latitude": {
+            "value": "1.056037",
+            "unit": "deg"
+          },
+          "upper_left_longitude": {
+            "value": "23.375034",
+            "unit": "deg"
+          },
+          "upper_right_latitude": {
+            "value": "1.068878",
+            "unit": "deg"
+          },
+          "upper_right_longitude": {
+            "value": "23.495434",
+            "unit": "deg"
+          },
+          "lower_left_latitude": {
+            "value": "0.224735",
+            "unit": "deg"
+          },
+          "lower_left_longitude": {
+            "value": "23.371989",
+            "unit": "deg"
+          },
+          "lower_right_latitude": {
+            "value": "0.237605",
+            "unit": "deg"
+          },
+          "lower_right_longitude": {
+            "value": "23.492393",
+            "unit": "deg"
+          }
+        },
+        "Refined_Corner_Coordinates": {
+          "upper_left_latitude": {
+            "value": "1.056037",
+            "unit": "deg"
+          },
+          "upper_left_longitude": {
+            "value": "23.375034",
+            "unit": "deg"
+          },
+          "upper_right_latitude": {
+            "value": "1.068878",
+            "unit": "deg"
+          },
+          "upper_right_longitude": {
+            "value": "23.495434",
+            "unit": "deg"
+          },
+          "lower_left_latitude": {
+            "value": "0.224735",
+            "unit": "deg"
+          },
+          "lower_left_longitude": {
+            "value": "23.371989",
+            "unit": "deg"
+          },
+          "lower_right_latitude": {
+            "value": "0.237605",
+            "unit": "deg"
+          },
+          "lower_right_longitude": {
+            "value": "23.492393",
+            "unit": "deg"
+          }
+        }
+      },
+      "axes": {
+        "line": 78175,
+        "sample": 12000
+      },
+      "datatype": "UnsignedByte",
+      "label_file_bytes": 938100000,
+      "md5": "c4d89f11e9f6660c345349e453f6a0f4",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:d9c3cab89240425677a7bc3d4393ba8eaac37716e62526bc413936e195474414\nsize 393740288\n",
+      "bands": 1,
+      "footprint_areas_km2": {
+        "System_Level_Coordinates": 91.98945819482351,
+        "Refined_Corner_Coordinates": 91.98945819482351
+      }
+    },
+    "OHRC_2024": {
+      "id": "ch2_ohr_ncp_20240330T0035085365_d_img_d18",
+      "label": "ch2_ohr_ncp_20240330T0035085365_d_img_d18/data/calibrated/20240330/ch2_ohr_ncp_20240330T0035085365_d_img_d18.xml",
+      "mission": "Chandrayaan-2 Orbiter OHRC Experiment",
+      "start": "2024-03-30T00:35:08.5365Z",
+      "stop": "2024-03-30T00:35:24.9199Z",
+      "level": "Calibrated",
+      "parameters": {
+        "job_id": {
+          "value": "OHRXXD18CHO2048702NNNN24090021317216_V2_1_01"
+        },
+        "level0_dir_name": {
+          "value": "OHRXXD18CHO2048702NNNN24090021317216_V2_1_01"
+        },
+        "imaging_orbit_number": {
+          "value": "20486"
+        },
+        "dumping_orbit_number": {
+          "value": "20487"
+        },
+        "line_exposure_duration": {
+          "value": "205.320",
+          "unit": "ms"
+        },
+        "bits_selection": {
+          "value": "msb"
+        },
+        "tdi_stages": {
+          "value": "TDI64"
+        },
+        "detector_pixel_width": {
+          "value": "5.2",
+          "unit": "micrometer"
+        },
+        "focal_length": {
+          "value": "2080",
+          "unit": "mm"
+        },
+        "reference_data_used": {
+          "value": "System"
+        },
+        "orbit_limb_direction": {
+          "value": "Descending"
+        },
+        "spacecraft_yaw_direction": {
+          "value": "False"
+        },
+        "spacecraft_altitude": {
+          "value": "119.82",
+          "unit": "km"
+        },
+        "pixel_resolution": {
+          "value": "0.30",
+          "unit": "m/pixel"
+        },
+        "roll": {
+          "value": "-0.399857",
+          "unit": "deg"
+        },
+        "pitch": {
+          "value": "1.107553",
+          "unit": "deg"
+        },
+        "yaw": {
+          "value": "-0.003809",
+          "unit": "deg"
+        },
+        "sun_azimuth": {
+          "value": "269.823288",
+          "unit": "deg"
+        },
+        "sun_elevation": {
+          "value": "7.266440",
+          "unit": "deg"
+        },
+        "solar_incidence": {
+          "value": "82.733560",
+          "unit": "deg"
+        },
+        "projection": {
+          "value": "Selenographic"
+        },
+        "area": {
+          "value": "Equatorial"
+        }
+      },
+      "corners": {
+        "System_Level_Coordinates": {
+          "upper_left_latitude": {
+            "value": "0.372032",
+            "unit": "deg"
+          },
+          "upper_left_longitude": {
+            "value": "23.472939",
+            "unit": "deg"
+          },
+          "upper_right_latitude": {
+            "value": "0.369695",
+            "unit": "deg"
+          },
+          "upper_right_longitude": {
+            "value": "23.593739",
+            "unit": "deg"
+          },
+          "lower_left_latitude": {
+            "value": "-0.441842",
+            "unit": "deg"
+          },
+          "lower_left_longitude": {
+            "value": "23.454679",
+            "unit": "deg"
+          },
+          "lower_right_latitude": {
+            "value": "-0.444178",
+            "unit": "deg"
+          },
+          "lower_right_longitude": {
+            "value": "23.575386",
+            "unit": "deg"
+          }
+        },
+        "Refined_Corner_Coordinates": {
+          "upper_left_latitude": {
+            "value": "0.372032",
+            "unit": "deg"
+          },
+          "upper_left_longitude": {
+            "value": "23.472939",
+            "unit": "deg"
+          },
+          "upper_right_latitude": {
+            "value": "0.369695",
+            "unit": "deg"
+          },
+          "upper_right_longitude": {
+            "value": "23.593739",
+            "unit": "deg"
+          },
+          "lower_left_latitude": {
+            "value": "-0.441842",
+            "unit": "deg"
+          },
+          "lower_left_longitude": {
+            "value": "23.454679",
+            "unit": "deg"
+          },
+          "lower_right_latitude": {
+            "value": "-0.444178",
+            "unit": "deg"
+          },
+          "lower_right_longitude": {
+            "value": "23.575386",
+            "unit": "deg"
+          }
+        }
+      },
+      "axes": {
+        "line": 79796,
+        "sample": 12000
+      },
+      "datatype": "UnsignedByte",
+      "label_file_bytes": 957552000,
+      "md5": "50e92759230c758752cefe3e495b3101",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:aea19b98352bac91c675aabe179f571d99335fa2e51f94b05d855865577ef3cb\nsize 134217728\n",
+      "bands": 1,
+      "footprint_areas_km2": {
+        "System_Level_Coordinates": 90.40578942678906,
+        "Refined_Corner_Coordinates": 90.40578942678906
+      }
+    },
+    "TMC": {
+      "id": "ch2_tmc_ndn_20240523T1600309548_d_oth_d18",
+      "label": "ch2_tmc_ndn_20240523T1600309548_d_oth_d18/data/derived/20240523/ch2_tmc_ndn_20240523T1600309548_d_oth_d18.xml",
+      "mission": "Chandrayaan-2 Orbiter TMC 2 Experiment",
+      "start": "2024-05-23T16:00:30.9548Z",
+      "stop": "2024-05-23T16:12:05.2619Z",
+      "level": "Derived",
+      "parameters": {
+        "job_id": {
+          "value": "TMCXXD18CHO2116100NNNN24144172444838_V2_1"
+        },
+        "level0_dir_name": {
+          "value": "TMCXXD18CHO2116100NNNN24144172444838_V2_1"
+        },
+        "imaging_orbit_number": {
+          "value": "21160"
+        },
+        "dumping_orbit_number": {
+          "value": "21161"
+        },
+        "line_exposure_duration": {
+          "value": "3.236",
+          "unit": "ms"
+        },
+        "gain": {
+          "value": "g1"
+        },
+        "exposure": {
+          "value": "e1"
+        },
+        "detector_pixel_width": {
+          "value": "7",
+          "unit": "micrometer"
+        },
+        "focal_length": {
+          "value": "140",
+          "unit": "mm"
+        },
+        "reference_data_used": {
+          "value": "SELENE"
+        },
+        "orbit_limb_direction": {
+          "value": "Descending"
+        },
+        "spacecraft_yaw_direction": {
+          "value": "False"
+        },
+        "spacecraft_altitude": {
+          "value": "121.43",
+          "unit": "km"
+        },
+        "product_accuracy_stdev_CE": {
+          "value": "89.795818",
+          "unit": "m"
+        },
+        "product_accuracy_rmse_CE": {
+          "value": "106.668100",
+          "unit": "m"
+        },
+        "roll": {
+          "value": "-0.003685",
+          "unit": "deg"
+        },
+        "pitch": {
+          "value": "-0.097176",
+          "unit": "deg"
+        },
+        "yaw": {
+          "value": "-0.012611",
+          "unit": "deg"
+        },
+        "sun_azimuth": {
+          "value": "285.644863",
+          "unit": "deg"
+        },
+        "sun_elevation": {
+          "value": "57.314926",
+          "unit": "deg"
+        },
+        "solar_incidence": {
+          "value": "32.685074",
+          "unit": "deg"
+        },
+        "projection": {
+          "value": "Selenographic"
+        },
+        "area": {
+          "value": "Equatorial"
+        }
+      },
+      "corners": {
+        "System_Level_Coordinates": {
+          "upper_left_latitude": {
+            "value": "8.497995",
+            "unit": "deg"
+          },
+          "upper_left_longitude": {
+            "value": "23.785752",
+            "unit": "deg"
+          },
+          "upper_right_latitude": {
+            "value": "8.481320",
+            "unit": "deg"
+          },
+          "upper_right_longitude": {
+            "value": "24.619795",
+            "unit": "deg"
+          },
+          "lower_left_latitude": {
+            "value": "-25.815939",
+            "unit": "deg"
+          },
+          "lower_left_longitude": {
+            "value": "22.876861",
+            "unit": "deg"
+          },
+          "lower_right_latitude": {
+            "value": "-25.833864",
+            "unit": "deg"
+          },
+          "lower_right_longitude": {
+            "value": "23.767155",
+            "unit": "deg"
+          }
+        },
+        "Refined_Corner_Coordinates": {
+          "upper_left_latitude": {
+            "value": "8.572855",
+            "unit": "deg"
+          },
+          "upper_left_longitude": {
+            "value": "23.795633",
+            "unit": "deg"
+          },
+          "upper_right_latitude": {
+            "value": "8.561030",
+            "unit": "deg"
+          },
+          "upper_right_longitude": {
+            "value": "24.643875",
+            "unit": "deg"
+          },
+          "lower_left_latitude": {
+            "value": "-25.750817",
+            "unit": "deg"
+          },
+          "lower_left_longitude": {
+            "value": "22.916615",
+            "unit": "deg"
+          },
+          "lower_right_latitude": {
+            "value": "-25.763968",
+            "unit": "deg"
+          },
+          "lower_right_longitude": {
+            "value": "23.821988",
+            "unit": "deg"
+          }
+        },
+        "Corrected_Corner_Coordinates": {
+          "upper_left_latitude": {
+            "value": "6.604546",
+            "unit": "deg"
+          },
+          "upper_left_longitude": {
+            "value": "22.979538",
+            "unit": "deg"
+          },
+          "upper_right_latitude": {
+            "value": "6.604546",
+            "unit": "deg"
+          },
+          "upper_right_longitude": {
+            "value": "24.594192",
+            "unit": "deg"
+          },
+          "lower_left_latitude": {
+            "value": "-23.878014",
+            "unit": "deg"
+          },
+          "lower_left_longitude": {
+            "value": "22.979538",
+            "unit": "deg"
+          },
+          "lower_right_latitude": {
+            "value": "-23.878014",
+            "unit": "deg"
+          },
+          "lower_right_longitude": {
+            "value": "24.594192",
+            "unit": "deg"
+          }
+        }
+      },
+      "axes": {
+        "line": 182972,
+        "sample": 9692
+      },
+      "datatype": "UnsignedLSB2",
+      "label_file_bytes": 3549657733,
+      "md5": "a4b1b1cdae90b055d483c73ac51b662f",
+      "lfs_pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:2cfd3b319fe31f511ce56a9f54e1e66a595d78cc7f65b8b1497a0400bb663f60\nsize 318767104\n",
+      "bands": 1,
+      "footprint_areas_km2": {
+        "System_Level_Coordinates": 26493.112180204596,
+        "Refined_Corner_Coordinates": 26951.318029714574,
+        "Corrected_Corner_Coordinates": 44217.92379823076
+      }
+    }
+  },
+  "pairs": [
+    {
+      "a": "IIRS",
+      "b": "OHRC_2021",
+      "footprint_basis": [
+        "System_Level_Coordinates",
+        "Refined_Corner_Coordinates"
+      ],
+      "area_km2": 0,
+      "fraction_a_pct": 0.0,
+      "fraction_b_pct": 0.0,
+      "intersection_wkt": "POLYGON EMPTY",
+      "intersection_bounds_lonlat": null,
+      "delta_sun_elevation": 47.186510000000006,
+      "delta_sun_azimuth": 16.800748999999996,
+      "delta_solar_incidence": 47.18651
+    },
+    {
+      "a": "IIRS",
+      "b": "OHRC_2024",
+      "footprint_basis": [
+        "System_Level_Coordinates",
+        "Refined_Corner_Coordinates"
+      ],
+      "area_km2": 24.081450772299434,
+      "fraction_a_pct": 0.0908792702211484,
+      "fraction_b_pct": 26.637067078320996,
+      "intersection_wkt": "POLYGON ((23.5415756949583 -0.443523681090761,23.5632189412693 0.370285441864683,23.593739 0.369695,23.575386 -0.444178,23.5415756949583 -0.443523681090761))",
+      "intersection_bounds_lonlat": [
+        23.54157569495827,
+        23.593739,
+        -0.444178,
+        0.37028544186468304
+      ],
+      "delta_sun_elevation": 50.050584,
+      "delta_sun_azimuth": 15.788405000000012,
+      "delta_solar_incidence": 50.050584
+    },
+    {
+      "a": "IIRS",
+      "b": "TMC",
+      "footprint_basis": [
+        "System_Level_Coordinates",
+        "Refined_Corner_Coordinates"
+      ],
+      "area_km2": 25258.008554458484,
+      "fraction_a_pct": 95.31939775443728,
+      "fraction_b_pct": 93.71715523007383,
+      "intersection_wkt": "POLYGON ((23.7859612152675 8.19519360192707,24.604061 8.179012,23.7600898282891 -25.7630688977999,22.916615 -25.750817,23.7859612152675 8.19519360192707))",
+      "intersection_bounds_lonlat": [
+        22.916615,
+        24.604061,
+        -25.763068897799943,
+        8.195193601927066
+      ],
+      "tmc_boundary_sensitivity": {
+        "System_Level_Coordinates": {
+          "area_km2": 26003.912175634676,
+          "other_pct": 98.13431025239106,
+          "tmc_pct": 98.15348230422153
+        },
+        "Refined_Corner_Coordinates": {
+          "area_km2": 25258.008554458484,
+          "other_pct": 95.31939775443729,
+          "tmc_pct": 93.71715523007383
+        },
+        "Corrected_Corner_Coordinates": {
+          "area_km2": 23543.984068487585,
+          "other_pct": 88.85096294546001,
+          "tmc_pct": 53.245340454970936
+        }
+      },
+      "delta_sun_elevation": 0.002098000000003708,
+      "delta_sun_azimuth": 0.03316999999998416,
+      "delta_solar_incidence": 0.002098000000003708
+    },
+    {
+      "a": "OHRC_2021",
+      "b": "OHRC_2024",
+      "footprint_basis": [
+        "Refined_Corner_Coordinates",
+        "Refined_Corner_Coordinates"
+      ],
+      "area_km2": 2.64272534328429,
+      "fraction_a_pct": 2.8728567328739882,
+      "fraction_b_pct": 2.923181535209511,
+      "intersection_wkt": "POLYGON ((23.4928833553409 0.371646155973247,23.492393 0.237605,23.4698689919991 0.235197405709346,23.472939 0.372032,23.4928833553409 0.371646155973247))",
+      "intersection_bounds_lonlat": [
+        23.46986899199907,
+        23.492883355340922,
+        0.2351974057093457,
+        0.372032
+      ],
+      "delta_sun_elevation": 2.8640739999999996,
+      "delta_sun_azimuth": 1.0123439999999846,
+      "delta_solar_incidence": 2.8640740000000022
+    },
+    {
+      "a": "OHRC_2021",
+      "b": "TMC",
+      "footprint_basis": [
+        "Refined_Corner_Coordinates",
+        "Refined_Corner_Coordinates"
+      ],
+      "area_km2": 0,
+      "fraction_a_pct": 0.0,
+      "fraction_b_pct": 0.0,
+      "intersection_wkt": "POLYGON EMPTY",
+      "intersection_bounds_lonlat": null,
+      "tmc_boundary_sensitivity": {
+        "System_Level_Coordinates": {
+          "area_km2": 0,
+          "other_pct": 0.0,
+          "tmc_pct": 0.0
+        },
+        "Refined_Corner_Coordinates": {
+          "area_km2": 0,
+          "other_pct": 0.0,
+          "tmc_pct": 0.0
+        },
+        "Corrected_Corner_Coordinates": {
+          "area_km2": 91.98945819482351,
+          "other_pct": 100.0,
+          "tmc_pct": 0.20803658402094444
+        }
+      },
+      "delta_sun_elevation": 47.184412,
+      "delta_sun_azimuth": 16.83391899999998,
+      "delta_solar_incidence": 47.184411999999995
+    },
+    {
+      "a": "OHRC_2024",
+      "b": "TMC",
+      "footprint_basis": [
+        "Refined_Corner_Coordinates",
+        "Refined_Corner_Coordinates"
+      ],
+      "area_km2": 7.0574987040921515,
+      "fraction_a_pct": 7.8064676486314415,
+      "fraction_b_pct": 0.026186098565981315,
+      "intersection_wkt": "POLYGON ((23.5855568125034 0.369853292816057,23.593739 0.369695,23.575386 -0.444178,23.5647150263581 -0.443971488410552,23.5855568125034 0.369853292816057))",
+      "intersection_bounds_lonlat": [
+        23.564715026358087,
+        23.593739,
+        -0.444178,
+        0.36985329281605683
+      ],
+      "tmc_boundary_sensitivity": {
+        "System_Level_Coordinates": {
+          "area_km2": 18.62342895504981,
+          "other_pct": 20.59981896417279,
+          "tmc_pct": 0.07029536140704927
+        },
+        "Refined_Corner_Coordinates": {
+          "area_km2": 7.0574987040921515,
+          "other_pct": 7.806467648631441,
+          "tmc_pct": 0.026186098565981315
+        },
+        "Corrected_Corner_Coordinates": {
+          "area_km2": 90.40578942678906,
+          "other_pct": 100.0,
+          "tmc_pct": 0.20445507536562887
+        }
+      },
+      "delta_sun_elevation": 50.048486,
+      "delta_sun_azimuth": 15.821574999999996,
+      "delta_solar_incidence": 50.048486
+    }
+  ]
+}
