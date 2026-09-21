@@ -18,6 +18,19 @@ same dimensions is not a substitute for geolocation.
 Use `M1126979192RC` for the first baseline. Reserve `M1129325970RC` for the
 larger illumination/viewpoint test.
 
+The calibrated CDR products used locally were retrieved from the official
+LROC PDS archive. Each file is 528,929,736 bytes and contains an attached PDS
+label:
+
+| Product | Acquisition | MD5 |
+|---|---|---|
+| `M1126979192RC.IMG` | 2013-06-27 | `db9c831e7eb7b7ab66ae48f013ed6acd` |
+| `M1129325970RC.IMG` | 2013-07-24 | `60410c616931fdb07ffb24926d464776` |
+
+Raw downloads are stored under `data/raw/nac/` and excluded from Git. The CDR
+rasters are calibrated but not map projected; apply their LROC camera/SPICE
+geometry before passing them to the pair generator.
+
 ## Example
 
 ```bash

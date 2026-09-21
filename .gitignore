@@ -3,6 +3,7 @@ Dataset
 .venv/
 data/processed/
 data/paired/
+data/raw/
 outputs/
 __pycache__/
 *.pyc
