@@ -1,0 +1,77 @@
+{
+  "method": "Assume archive subsampled browse spans native raster extent; positive browse pixels are support proxy only",
+  "browse_lon_step": 0.0016663438596491228,
+  "browse_lat_step": -0.0016660182106356235,
+  "pairs": {
+    "OHRC_2021": {
+      "candidate_browse_centres_inside_ohrc": 36008,
+      "positive_browse_centres_inside_ohrc": 0,
+      "eastward_gap_m_min_median_max": [
+        3338.961633065484,
+        3559.3558000244957,
+        6531.134615042295
+      ],
+      "sample_rows": [
+        {
+          "browse_row": 3323,
+          "latitude": 1.0675340616730464,
+          "left_positive_longitude": 23.62108002993405,
+          "ohrc_right_longitude": 23.495429081571842,
+          "gap_m": 3809.496407721635
+        },
+        {
+          "browse_row": 3576,
+          "latitude": 0.6460314543822339,
+          "left_positive_longitude": 23.611081966776155,
+          "ohrc_right_longitude": 23.493869601832685,
+          "gap_m": 3554.0456840512174
+        },
+        {
+          "browse_row": 3828,
+          "latitude": 0.22619486530205624,
+          "left_positive_longitude": 23.60108390361826,
+          "ohrc_right_longitude": 23.385699210981866,
+          "gap_m": 6531.134615042295
+        }
+      ]
+    },
+    "OHRC_2024": {
+      "candidate_browse_centres_inside_ohrc": 35424,
+      "positive_browse_centres_inside_ohrc": 0,
+      "eastward_gap_m_min_median_max": [
+        315.80992600107135,
+        342.32215190959965,
+        2584.6716054312806
+      ],
+      "sample_rows": [
+        {
+          "browse_row": 3741,
+          "latitude": 0.371138449627356,
+          "left_positive_longitude": 23.60441659133756,
+          "ohrc_right_longitude": 23.519177796958605,
+          "gap_m": 2584.6716054312806
+        },
+        {
+          "browse_row": 3986,
+          "latitude": -0.0370360119783717,
+          "left_positive_longitude": 23.596084872039313,
+          "ohrc_right_longitude": 23.584559624110394,
+          "gap_m": 349.4840586607413
+        },
+        {
+          "browse_row": 4230,
+          "latitude": -0.44354445537346443,
+          "left_positive_longitude": 23.58608680888142,
+          "ohrc_right_longitude": 23.575399864413026,
+          "gap_m": 324.05425189097787
+        }
+      ]
+    }
+  },
+  "IIRS_TMC_support_proxy": {
+    "intersection_km2": 22014.189877243116,
+    "tmc_nonzero_support_km2": 23203.329988154994,
+    "tmc_support_percent": 94.87513166636462,
+    "iirs_corner_area_percent": 83.07778171134726
+  }
+}
