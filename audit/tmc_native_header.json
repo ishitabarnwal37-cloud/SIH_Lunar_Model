@@ -1,0 +1,68 @@
+{
+  "description": "audit/tmc_header_probe.bin",
+  "driverShortName": "GTiff",
+  "driverLongName": "GeoTIFF",
+  "files": [
+    "audit/tmc_header_probe.bin"
+  ],
+  "size": [
+    9692,
+    182972
+  ],
+  "metadata": {
+    "IMAGE_STRUCTURE": {
+      "INTERLEAVE": "BAND"
+    }
+  },
+  "cornerCoordinates": {
+    "upperLeft": [
+      0.0,
+      0.0
+    ],
+    "lowerLeft": [
+      0.0,
+      182972.0
+    ],
+    "lowerRight": [
+      9692.0,
+      182972.0
+    ],
+    "upperRight": [
+      9692.0,
+      0.0
+    ],
+    "center": [
+      4846.0,
+      91486.0
+    ]
+  },
+  "bands": [
+    {
+      "band": 1,
+      "block": [
+        9692,
+        1
+      ],
+      "type": "UInt16",
+      "colorInterpretation": "Gray",
+      "metadata": {}
+    }
+  ],
+  "stac": {
+    "proj:shape": [
+      182972,
+      9692
+    ],
+    "raster:bands": [
+      {
+        "data_type": "uint16"
+      }
+    ],
+    "eo:bands": [
+      {
+        "name": "b1",
+        "description": "Gray"
+      }
+    ]
+  }
+}

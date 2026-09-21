@@ -1,0 +1,167 @@
+{
+  "range_start": 2927900,
+  "bytes_read": 600,
+  "last_strip_offset": 3549522045,
+  "pixel_scale": [
+    0.0001666,
+    0.0001666,
+    0.0
+  ],
+  "tiepoint": [
+    0.0,
+    0.0,
+    0.0,
+    22.979537643969138,
+    6.604545584720541,
+    0.0
+  ],
+  "gdal": {
+    "description": "/Users/ankitadeylaik/Documents/ChatGPT/Multi model sun invariant project/audit/tmc_metadata_only_sparse.tif",
+    "driverShortName": "GTiff",
+    "driverLongName": "GeoTIFF",
+    "files": [
+      "/Users/ankitadeylaik/Documents/ChatGPT/Multi model sun invariant project/audit/tmc_metadata_only_sparse.tif"
+    ],
+    "size": [
+      9692,
+      182972
+    ],
+    "coordinateSystem": {
+      "wkt": "GEOGCRS[\"SelenoGraphic\",\n    DATUM[\"Moon Spheroid\",\n        ELLIPSOID[\"Moon Spheroid\",1737400,0,\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]]],\n    PRIMEM[\"Reference_Meridian\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433,\n            ID[\"EPSG\",9122]]],\n    CS[ellipsoidal,2],\n        AXIS[\"latitude\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433,\n                ID[\"EPSG\",9122]]],\n        AXIS[\"longitude\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433,\n                ID[\"EPSG\",9122]]]]",
+      "dataAxisToSRSAxisMapping": [
+        2,
+        1
+      ]
+    },
+    "geoTransform": [
+      22.979537643969138,
+      0.0001666,
+      0.0,
+      6.604545584720541,
+      0.0,
+      -0.0001666
+    ],
+    "metadata": {
+      "": {
+        "AREA_OR_POINT": "Area"
+      },
+      "IMAGE_STRUCTURE": {
+        "INTERLEAVE": "BAND"
+      }
+    },
+    "cornerCoordinates": {
+      "upperLeft": [
+        22.9795376,
+        6.6045456
+      ],
+      "lowerLeft": [
+        22.9795376,
+        -23.8785896
+      ],
+      "lowerRight": [
+        24.5942248,
+        -23.8785896
+      ],
+      "upperRight": [
+        24.5942248,
+        6.6045456
+      ],
+      "center": [
+        23.7868812,
+        -8.637022
+      ]
+    },
+    "bands": [
+      {
+        "band": 1,
+        "block": [
+          9692,
+          1
+        ],
+        "type": "UInt16",
+        "colorInterpretation": "Gray",
+        "min": 0.0,
+        "max": 1026.0,
+        "minimum": 0.0,
+        "maximum": 1026.0,
+        "mean": 128.766,
+        "stdDev": 133.998,
+        "metadata": {
+          "": {
+            "STATISTICS_MAXIMUM": "1026",
+            "STATISTICS_MEAN": "128.7663071929",
+            "STATISTICS_MINIMUM": "0",
+            "STATISTICS_STDDEV": "133.9984799896"
+          }
+        }
+      }
+    ],
+    "stac": {
+      "proj:shape": [
+        182972,
+        9692
+      ],
+      "proj:wkt2": "GEOGCRS[\"SelenoGraphic\",\n    DATUM[\"Moon Spheroid\",\n        ELLIPSOID[\"Moon Spheroid\",1737400,0,\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]]],\n    PRIMEM[\"Reference_Meridian\",0,\n        ANGLEUNIT[\"degree\",0.0174532925199433,\n            ID[\"EPSG\",9122]]],\n    CS[ellipsoidal,2],\n        AXIS[\"latitude\",north,\n            ORDER[1],\n            ANGLEUNIT[\"degree\",0.0174532925199433,\n                ID[\"EPSG\",9122]]],\n        AXIS[\"longitude\",east,\n            ORDER[2],\n            ANGLEUNIT[\"degree\",0.0174532925199433,\n                ID[\"EPSG\",9122]]]]",
+      "proj:epsg": null,
+      "proj:projjson": {
+        "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+        "type": "GeographicCRS",
+        "name": "SelenoGraphic",
+        "datum": {
+          "type": "GeodeticReferenceFrame",
+          "name": "Moon Spheroid",
+          "ellipsoid": {
+            "name": "Moon Spheroid",
+            "radius": 1737400
+          },
+          "prime_meridian": {
+            "name": "Reference_Meridian",
+            "longitude": 0
+          }
+        },
+        "coordinate_system": {
+          "subtype": "ellipsoidal",
+          "axis": [
+            {
+              "name": "Latitude",
+              "abbreviation": "lat",
+              "direction": "north",
+              "unit": "degree"
+            },
+            {
+              "name": "Longitude",
+              "abbreviation": "lon",
+              "direction": "east",
+              "unit": "degree"
+            }
+          ]
+        }
+      },
+      "proj:transform": [
+        0.0001666,
+        0.0,
+        22.979537643969138,
+        0.0,
+        -0.0001666,
+        6.604545584720541
+      ],
+      "raster:bands": [
+        {
+          "data_type": "uint16",
+          "stats": {
+            "minimum": 0.0,
+            "maximum": 1026.0,
+            "mean": 128.766,
+            "stddev": 133.998
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "b1",
+          "description": "Gray"
+        }
+      ]
+    }
+  }
+}

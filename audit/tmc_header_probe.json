@@ -1,0 +1,7 @@
+{
+  "status": 206,
+  "content_range": "bytes 0-65535/318767104",
+  "content_length": "65536",
+  "bytes_read": 65536,
+  "first_16_hex": "49492b00080000001000000000000000"
+}

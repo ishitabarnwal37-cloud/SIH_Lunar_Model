@@ -1,0 +1,26 @@
+[
+  {
+    "file": "snapshot/ch2_tmc_ndn_20240523T1600309548_d_oth_d18/browse/derived/20240523/ch2_tmc_ndn_20240523T1600309548_b_bot_d18.png",
+    "label_md5": "a9c9b8d84be6835409b799d6d79b5939",
+    "actual_md5": "a9c9b8d84be6835409b799d6d79b5939",
+    "match": true
+  },
+  {
+    "file": "snapshot/ch2_ohr_ncp_20240330T0035085365_d_img_d18/browse/calibrated/20240330/ch2_ohr_ncp_20240330T0035085365_b_brw_d18.png",
+    "label_md5": "07df2daf73045d177082072ff1342a36",
+    "actual_md5": "07df2daf73045d177082072ff1342a36",
+    "match": true
+  },
+  {
+    "file": "snapshot/ch2_ohr_ncp_20210402T0546284043_d_img_d18/browse/calibrated/20210402/ch2_ohr_ncp_20210402T0546284043_b_brw_d18.png",
+    "label_md5": "1ad69d342718eeddc406653946bf8710",
+    "actual_md5": "1ad69d342718eeddc406653946bf8710",
+    "match": true
+  },
+  {
+    "file": "snapshot/ch2_iir_nri_20240523T1600301891_d_img_d18/browse/raw/20240523/ch2_iir_nri_20240523T1600301891_b_brw_d18.png",
+    "label_md5": "f2872efea2faa69ee19bdfaa868aef46",
+    "actual_md5": "f2872efea2faa69ee19bdfaa868aef46",
+    "match": true
+  }
+]
