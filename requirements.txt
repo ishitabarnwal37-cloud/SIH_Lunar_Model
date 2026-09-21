@@ -11,3 +11,9 @@ rasterio
 numpy
 pillow
 opencv-python   # only needed by the legacy script 09
+
+# KAN-LoFTR fine-tuning (src/model.py, train.py, evaluate.py). CPU torch is enough for tests;
+# on Kaggle the preinstalled CUDA torch is used and only kornia/einops are needed.
+torch
+kornia
+einops
