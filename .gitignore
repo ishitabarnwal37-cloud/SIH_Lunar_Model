@@ -2,6 +2,7 @@ Dataset
 .DS_Store
 .venv/
 data/processed/
+data/paired/
 outputs/
 __pycache__/
 *.pyc
