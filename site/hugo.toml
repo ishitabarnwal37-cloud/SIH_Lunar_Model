@@ -1,0 +1,22 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Cross-Sensor Lunar Image Registration"
+theme = "kraiklyn"
+
+enableRobotsTXT = true
+
+[params]
+  externalTitle = "Reference"
+  sidebarColor = "black"
+  customCss = []
+
+
+[[menu.shortcuts]]
+  name = "ISSDC / PRADAN"
+  url = "https://pradan.issdc.gov.in/"
+  weight = 30
+
+[[menu.shortcuts]]
+  name = "Project reference: NASA"
+  url = "https://www.nasa.gov/"
+  weight = 30
