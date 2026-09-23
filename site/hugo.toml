@@ -3,12 +3,11 @@ languageCode = "en-us"
 title = "Cross-Sensor Lunar Image Registration"
 theme = "kraiklyn"
 
-[params]
-  description = "Cross-Sensor Lunar Image Registration"
-
 enableRobotsTXT = true
 
 [params]
+  description = "Cross-Sensor Lunar Image Registration"
+  
   externalTitle = "Reference"
   sidebarColor = "black"
   customCss = ["css/custom.css"]
