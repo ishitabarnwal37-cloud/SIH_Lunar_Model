@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta name="generator" content="Hugo 0.166.0">
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Cross-Sensor Lunar Image Registration</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="//localhost:1313/css/styles.css">
+  <link rel="stylesheet" href="//localhost:1313/css/custom.css">
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Cross-Sensor Lunar Image Registration" />
+
+</head>
+<body>
+
+<div class="sidebar sidebar-black">
+    <div class="navigation">
+        
+        <h1 class="site-title"><a href="//localhost:1313/">Cross-Sensor Lunar Image Registration</a></h1>
+
+
+        <nav class="internal">
+            <ul>
+    
+        
+                <li>
+        <a href="#project-overview">Project overview</a>
+
+    </li>
+
+
+        
+                <li>
+        <a href="#dataset">Dataset collection</a>
+
+    </li>
+
+
+        
+                <li>
+        <a href="#preprocessing">Preprocessing pipeline</a>
+
+    </li>
+
+
+        
+                <li>
+        <a href="#training-data">Training data and transformations</a>
+
+    </li>
+
+
+        
+                <li>
+        <a href="#loftr">LoFTR fine-tuning</a>
+
+    </li>
+
+
+        
+                <li>
+        <a href="#kan">KAN-based transformer output</a>
+
+    </li>
+
+
+        
+                <li>
+        <a href="#evaluation">Filtering and evaluation</a>
+
+    </li>
+
+
+        
+                <li>
+        <a href="#results">Outputs and examples</a>
+
+    </li>
+
+
+        
+    
+</ul>
+
+        </nav>
+
+        <nav class="external">
+            <div class="external-title">Reference</div>
+            
+            <ul id="shortcuts">
+                
+                <li>
+                    <a href="https://pradan.issdc.gov.in/" target="_blank" rel="noopener">ISSDC / PRADAN</a>
+                </li>
+                
+                <li>
+                    <a href="https://www.nasa.gov/" target="_blank" rel="noopener">Project reference: NASA</a>
+                </li>
+                
+            </ul>
+            
+        </nav>
+    </div>
+
+    <div class="version">
+            generated on Sep 23, 2026
+    </div>
+</div>
+
+<div class="content">
+    
+        
+                <section class="page" id="project-overview">
+    <h1>
+        <a href="#project-overview">Project overview</a>
+    </h1>
+    <div class="content">
+        <p>This project focuses on <strong>cross-sensor lunar image registration</strong>: establishing reliable image correspondences between lunar observations acquired by different instruments under different imaging conditions.</p>
+<p>Our workflow is built around Chandrayaan-2 imagery, preprocessing, dataset preparation, transformer-based correspondence matching and evaluation.</p>
+<h3 id="scope">Scope</h3>
+<p>The work combines:</p>
+<ul>
+<li>Chandrayaan-2 <strong>OHRC</strong>, <strong>TMC-2</strong> and <strong>IIRS</strong> imagery.</li>
+<li><strong>LRO NAC</strong> images as reference imagery over the same lunar regions.</li>
+<li>Different illumination, scale and viewing conditions.</li>
+<li>LoFTR-based correspondence detection with targeted fine-tuning.</li>
+<li>KAN-based replacement of the transformer&rsquo;s final layer.</li>
+<li>Confidence filtering and robust geometric-transform estimation.</li>
+</ul>
+<p>The objective is to make correspondence detection more reliable across sensors and challenging lunar terrain such as craters and sharp shadows.</p>
+
+    </div>
+</section>
+
+
+
+
+        
+                <section class="page" id="dataset">
+    <h1>
+        <a href="#dataset">Dataset collection</a>
+    </h1>
+    <div class="content">
+        <p>The dataset was assembled from <strong>Chandrayaan-2 OHRC, TMC-2 and IIRS imagery</strong> collected from ISRO, together with <strong>LRO NAC reference images</strong> covering the same lunar regions.</p>
+<h3 id="dataset-preparation">Dataset preparation</h3>
+<ol>
+<li>Verify image metadata, dimensions, spatial resolution, acquisition time, Sun angles and file integrity.</li>
+<li>Compare geographic footprints to identify pairs containing common lunar terrain.</li>
+<li>Read PDS <code>.IMG</code>, <code>.TIF</code> and spectral-image formats using GDAL together with their metadata.</li>
+<li>Convert suitable inputs to GeoTIFF-compatible processing formats while preserving lunar coordinate information.</li>
+</ol>
+<p>The resulting pairs span different illumination, scale and viewing conditions so that correspondence matching is tested across sensor and imaging differences.</p>
+
+    </div>
+</section>
+
+
+
+
+        
+                <section class="page" id="preprocessing">
+    <h1>
+        <a href="#preprocessing">Preprocessing pipeline</a>
+    </h1>
+    <div class="content">
+        <p>The preprocessing stage converts the raw observations into spatially consistent inputs for registration.</p>
+<h3 id="processing-steps">Processing steps</h3>
+<ul>
+<li>Create validity masks to remove exterior padding and invalid pixels while retaining genuine dark shadow regions.</li>
+<li>Resample images to a common spatial resolution using antialiased downsampling so terrain structure is not unnecessarily lost.</li>
+<li>Project moving and reference images onto a common lunar coordinate grid.</li>
+<li>Apply percentile-based intensity normalization to reduce sensor-dependent brightness and contrast differences.</li>
+<li>Prepare spatially aligned image tiles containing moving images, fixed images, validity masks and correspondence transformations.</li>
+</ul>
+<h3 id="preprocessing-examples">Preprocessing examples</h3>
+<p><img src="images/ohrc-preprocessing.png" alt="OHRC preprocessing preview"></p>
+<p><img src="images/tmc-iirs-preprocessing.png" alt="TMC and IIRS preprocessing preview"></p>
+<p><img src="images/archive-browse.png" alt="Browse preview"></p>
+
+    </div>
+</section>
+
+
+
+
+        
+                <section class="page" id="training-data">
+    <h1>
+        <a href="#training-data">Training data and transformations</a>
+    </h1>
+    <div class="content">
+        <p>The aligned data are divided geographically into <strong>training, validation and test sets</strong> so that separate lunar regions prevent geographic leakage between splits.</p>
+<p>Controlled transformations are then introduced with exactly known ground truth:</p>
+<ul>
+<li>rotation</li>
+<li>translation</li>
+<li>scale</li>
+<li>illumination changes</li>
+</ul>
+<p>Each training example therefore retains a correspondence transformation that can be compared directly with the model&rsquo;s predicted geometry during evaluation.</p>
+
+    </div>
+</section>
+
+
+
+
+        
+                <section class="page" id="loftr">
+    <h1>
+        <a href="#loftr">LoFTR fine-tuning</a>
+    </h1>
+    <div class="content">
+        <p>The matching backbone is <strong>LoFTR</strong>. The project fine-tunes LoFTR&rsquo;s <strong>coarse-attention module</strong> while keeping the pre-trained <strong>ResNet</strong> unchanged.</p>
+<p>Our motivation was to adapt correspondence detection to different lunar imaging sensors while keeping the computational cost lower than retraining the complete network.</p>
+<p>The pre-trained ResNet is retained because it can capture useful features across bright and shadowed environments, which is important for Sun-angle variation.</p>
+<p><img src="images/loftr-flow.png" alt="LoFTR flow"></p>
+<div class="block note">
+    Only the attention layers are fine-tuned in this stage; the pre-trained ResNet is kept fixed.
+</div>
+
+
+    </div>
+</section>
+
+
+
+
+        
+                <section class="page" id="kan">
+    <h1>
+        <a href="#kan">KAN-based transformer output</a>
+    </h1>
+    <div class="content">
+        <p>We investigate a <strong>Kolmogorov-Arnold Network (KAN)</strong> as a replacement for the transformer&rsquo;s last layer.</p>
+<p>Traditional neural-network layers learn fixed weight matrices. KAN places <strong>learnable one-dimensional spline functions on the edges</strong> of the network instead of using the conventional weight representation of the final layer.</p>
+<p>KAN is presented as an alternative neural-network formulation derived from the <strong>Kolmogorov Representation Theorem</strong>.</p>
+<h3 id="why-use-kan-here">Why use KAN here?</h3>
+<p>LoFTR fine module can produce over-smoothed predictions near craters and sharp shadows. Because the KAN uses continuous B-spline functions, the project investigates whether local information can be interpolated at sub-pixel scale without losing localized structure.</p>
+<p><img src="images/kan-vs-mlp.png" alt="KAN versus MLP"></p>
+
+    </div>
+</section>
+
+
+
+
+        
+                <section class="page" id="evaluation">
+    <h1>
+        <a href="#evaluation">Filtering and evaluation</a>
+    </h1>
+    <div class="content">
+        <p>Predicted correspondences are filtered with <strong>confidence checks</strong> before estimating a robust geometric transformation.</p>
+<p>The evaluation several complementary measures:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Metric</th>
+					<th>What it captures</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Match count</td>
+					<td>Number of predicted correspondences</td>
+			</tr>
+			<tr>
+					<td>Inlier ratio</td>
+					<td>Fraction of correspondences consistent with the estimated geometry</td>
+			</tr>
+			<tr>
+					<td>Ground-truth error</td>
+					<td>Difference from the known transformation</td>
+			</tr>
+			<tr>
+					<td>Corner-transfer error</td>
+					<td>Geometric transfer accuracy at image corners</td>
+			</tr>
+			<tr>
+					<td>Spatial match coverage</td>
+					<td>How widely correspondences are distributed over the image</td>
+			</tr>
+	</tbody>
+</table>
+<p>These measures are used together rather than relying on a single count of matches, because the quality and spatial distribution of matches matter for image registration.</p>
+
+    </div>
+</section>
+
+
+
+
+        
+                <section class="page" id="results">
+    <h1>
+        <a href="#results">Outputs and examples</a>
+    </h1>
+    <div class="content">
+        <h3 id="fine-tuning-output">Fine-tuning output</h3>
+<p><img src="images/finetuning-curves.png" alt="Fine-tuning curves"></p>
+<h3 id="ohrc-and-tmc-correspondence-outputs">OHRC and TMC correspondence outputs</h3>
+<p><img src="images/matching-output.png" alt="Matching output"></p>
+
+    </div>
+</section>
+
+
+
+
+        
+    
+</div>
+</body>
+</html>
+
