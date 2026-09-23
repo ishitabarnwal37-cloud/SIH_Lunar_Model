@@ -1,7 +1,10 @@
-baseURL = "/"
+baseURL = "https://ishitabarnwal37-cloud.github.io/SIH_Lunar_Model/"
 languageCode = "en-us"
 title = "Cross-Sensor Lunar Image Registration"
 theme = "kraiklyn"
+
+[params]
+  description = "Cross-Sensor Lunar Image Registration"
 
 enableRobotsTXT = true
 
