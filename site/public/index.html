@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="//localhost:1313/css/styles.css">
-  
+  <link rel="stylesheet" href="//localhost:1313/css/custom.css">
   <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Cross-Sensor Lunar Image Registration" />
 
 </head>
@@ -120,11 +120,7 @@
     </h1>
     <div class="content">
         <p>This project focuses on <strong>cross-sensor lunar image registration</strong>: establishing reliable image correspondences between lunar observations acquired by different instruments under different imaging conditions.</p>
-<p>The supplied project brief describes a workflow built around Chandrayaan-2 imagery, preprocessing, dataset preparation, transformer-based correspondence matching and evaluation.</p>
-<div class="block info">
-    The website is a research showcase rather than an interactive application. It contains no login, user-input, or data-submission flow.
-</div>
-
+<p>Our workflow is built around Chandrayaan-2 imagery, preprocessing, dataset preparation, transformer-based correspondence matching and evaluation.</p>
 <h3 id="scope">Scope</h3>
 <p>The work combines:</p>
 <ul>
@@ -183,7 +179,6 @@
 <h3 id="preprocessing-examples">Preprocessing examples</h3>
 <p><img src="images/ohrc-preprocessing.png" alt="OHRC preprocessing preview"></p>
 <p><img src="images/tmc-iirs-preprocessing.png" alt="TMC and IIRS preprocessing preview"></p>
-<p>The project brief also references browse previews under <code>outputs/preprocessing_preview/</code>, including the OHRC preprocessed browse image.</p>
 <p><img src="images/archive-browse.png" alt="Browse preview"></p>
 
     </div>
@@ -221,11 +216,11 @@
     </h1>
     <div class="content">
         <p>The matching backbone is <strong>LoFTR</strong>. The project fine-tunes LoFTR&rsquo;s <strong>coarse-attention module</strong> while keeping the pre-trained <strong>ResNet</strong> unchanged.</p>
-<p>The motivation stated in the project brief is to adapt correspondence detection to different lunar imaging sensors while keeping the computational cost lower than retraining the complete network.</p>
+<p>Our motivation was to adapt correspondence detection to different lunar imaging sensors while keeping the computational cost lower than retraining the complete network.</p>
 <p>The pre-trained ResNet is retained because it can capture useful features across bright and shadowed environments, which is important for Sun-angle variation.</p>
 <p><img src="images/loftr-flow.png" alt="LoFTR flow"></p>
 <div class="block note">
-    Only the attention layers are fine-tuned in this stage; the pre-trained ResNet is kept fixed according to the supplied project brief.
+    Only the attention layers are fine-tuned in this stage; the pre-trained ResNet is kept fixed.
 </div>
 
 
@@ -241,11 +236,11 @@
         <a href="#kan">KAN-based transformer output</a>
     </h1>
     <div class="content">
-        <p>The project also investigates a <strong>Kolmogorov-Arnold Network (KAN)</strong> as a replacement for the transformer&rsquo;s last layer.</p>
-<p>Traditional neural-network layers learn fixed weight matrices. In the approach described in the brief, KAN places <strong>learnable one-dimensional spline functions on the edges</strong> of the network instead of using the conventional weight representation of the final layer.</p>
+        <p>We investigate a <strong>Kolmogorov-Arnold Network (KAN)</strong> as a replacement for the transformer&rsquo;s last layer.</p>
+<p>Traditional neural-network layers learn fixed weight matrices. KAN places <strong>learnable one-dimensional spline functions on the edges</strong> of the network instead of using the conventional weight representation of the final layer.</p>
 <p>KAN is presented as an alternative neural-network formulation derived from the <strong>Kolmogorov Representation Theorem</strong>.</p>
 <h3 id="why-use-kan-here">Why use KAN here?</h3>
-<p>The project notes that the LoFTR fine module can produce over-smoothed predictions near craters and sharp shadows. Because the KAN uses continuous B-spline functions, the project investigates whether local information can be interpolated at sub-pixel scale without losing localized structure.</p>
+<p>LoFTR fine module can produce over-smoothed predictions near craters and sharp shadows. Because the KAN uses continuous B-spline functions, the project investigates whether local information can be interpolated at sub-pixel scale without losing localized structure.</p>
 <p><img src="images/kan-vs-mlp.png" alt="KAN versus MLP"></p>
 
     </div>
@@ -261,7 +256,7 @@
     </h1>
     <div class="content">
         <p>Predicted correspondences are filtered with <strong>confidence checks</strong> before estimating a robust geometric transformation.</p>
-<p>The evaluation in the project brief uses several complementary measures:</p>
+<p>The evaluation several complementary measures:</p>
 <table>
 	<thead>
 			<tr>
@@ -306,12 +301,10 @@
         <a href="#results">Outputs and examples</a>
     </h1>
     <div class="content">
-        <p>The supplied project material includes fine-tuning curves and cross-sensor matching outputs for OHRC and TMC imagery.</p>
-<h3 id="fine-tuning-output">Fine-tuning output</h3>
+        <h3 id="fine-tuning-output">Fine-tuning output</h3>
 <p><img src="images/finetuning-curves.png" alt="Fine-tuning curves"></p>
 <h3 id="ohrc-and-tmc-correspondence-outputs">OHRC and TMC correspondence outputs</h3>
 <p><img src="images/matching-output.png" alt="Matching output"></p>
-<p>The project brief identifies these as the <strong>fine-tuning outputs</strong> and <strong>OHRC/TMC matching outputs</strong> included in the presentation material.</p>
 
     </div>
 </section>

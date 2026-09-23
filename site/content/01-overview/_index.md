@@ -7,11 +7,7 @@ draft: false
 
 This project focuses on **cross-sensor lunar image registration**: establishing reliable image correspondences between lunar observations acquired by different instruments under different imaging conditions.
 
-The supplied project brief describes a workflow built around Chandrayaan-2 imagery, preprocessing, dataset preparation, transformer-based correspondence matching and evaluation.
-
-{{< block info >}}
-The website is a research showcase rather than an interactive application. It contains no login, user-input, or data-submission flow.
-{{< /block >}}
+Our workflow is built around Chandrayaan-2 imagery, preprocessing, dataset preparation, transformer-based correspondence matching and evaluation.
 
 ### Scope
 

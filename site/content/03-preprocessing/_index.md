@@ -21,6 +21,4 @@ The preprocessing stage converts the raw observations into spatially consistent 
 
 ![TMC and IIRS preprocessing preview](images/tmc-iirs-preprocessing.png)
 
-The project brief also references browse previews under `outputs/preprocessing_preview/`, including the OHRC preprocessed browse image.
-
 ![Browse preview](images/archive-browse.png)

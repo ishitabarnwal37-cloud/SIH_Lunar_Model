@@ -8,7 +8,7 @@ enableRobotsTXT = true
 [params]
   externalTitle = "Reference"
   sidebarColor = "black"
-  customCss = []
+  customCss = ["css/custom.css"]
 
 
 [[menu.shortcuts]]

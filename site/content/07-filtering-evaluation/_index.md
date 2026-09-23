@@ -7,7 +7,7 @@ draft: false
 
 Predicted correspondences are filtered with **confidence checks** before estimating a robust geometric transformation.
 
-The evaluation in the project brief uses several complementary measures:
+The evaluation several complementary measures:
 
 | Metric | What it captures |
 | --- | --- |
