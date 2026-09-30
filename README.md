@@ -111,8 +111,6 @@ The relevant implementation files include:
 
 ![KAN comparison](Lunar_Site/assets/kan_comparison.png)
 
-*Note: Superior performance of KAN over standard MLPs is observed or intended in the repository context; universal outperformance claims are not assumed without controlled evaluation.*
-
 ## Training and Fine-Tuning
 
 The training workflow is structured around modular Python scripts and a fine-tuning notebook:
@@ -126,8 +124,6 @@ The training workflow is structured around modular Python scripts and a fine-tun
 **Motivation for Fine-Tuning:** Fine-tuning on lunar imagery adapts the model from general terrestrial feature distributions to specialized lunar surface textures, harsh lighting, shadows, and unique sensor characteristics.
 
 ![Fine-tuning outputs](Lunar_Site/assets/fine_tuning_outputs.png)
-
-*Note: Specific loss function formulations, exact learning rates, and hardware configurations are not specified in the repository.*
 
 ## Matching, Filtering, and Evaluation
 
@@ -144,8 +140,6 @@ Post-processing and evaluation ensure that generated correspondences are geometr
 **Necessity of Filtering:** Not all predicted correspondences are correct. Low-confidence or geometrically inconsistent matches can distort registration accuracy. Filtering removes unreliable points to improve measurement and visualization quality.
 
 ![Matching outputs](Lunar_Site/assets/matching_outputs.png)
-
-*Note: Where project figures or outputs display specific metrics (for instance, illustrative match counts or error values), they describe specific test runs and should not be interpreted as universal benchmarks.*
 
 ## Results and Observations
 
