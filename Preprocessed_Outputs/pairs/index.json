@@ -1,0 +1,33 @@
+{
+  "n_pairs": 58,
+  "patch_px": 128,
+  "stride_px": 64,
+  "column_x0": 0,
+  "block_rows": 512,
+  "split_counts": {
+    "train": 44,
+    "val": 7,
+    "test": 7
+  },
+  "dropped_straddling_block": 8,
+  "dropped_low_validity": 0,
+  "tensor_format": "NCHW float32, values in [0, 1], 0 = invalid",
+  "resnet_input": {
+    "loftr": "1 channel, [0, 1], as stored",
+    "imagenet": "use pair_dataset.to_resnet_input(x, 'imagenet')"
+  },
+  "coarse_feature_map_px": 16,
+  "alignment_status": "ASSUMED aligned per user instruction; NOT verified. Georeferenced overlap of OHRC-2024 and TMC is 0 (343 m gap); pairing follows the corridor geometry of scripts 11-18.",
+  "qa_summary": {
+    "ncc0_median": 0.005488171707838774,
+    "best_ncc_median": 0.047165222465991974,
+    "median_best_shift_xy_px": [
+      0.0,
+      -1.0
+    ],
+    "note": "cross-illumination NCC is low even when aligned; a consistent non-zero median shift suggests residual translation."
+  },
+  "sources": {
+    "strips": "C:\\Users\\Rudra\\Desktop\\SIH_Lunar_Model\\outputs\\loftr"
+  }
+}
